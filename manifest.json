@@ -1,0 +1,39 @@
+{
+  "platform-version": "2.2",
+  "product": {
+    "freshservice": {
+      "events": {
+        "onAppInstall": {
+          "handler": "onAppInstallHandler"
+        },
+        "onExternalEvent": {
+          "handler": "onExternalEventHandler"
+        },
+        "onScheduledEvent": {
+          "handler": "onScheduledEventHandler"
+        },
+        "onAppUninstall": {
+          "handler": "onAppUninstallCallback"
+        },
+        "afterAppUpdate": {
+          "handler": "afterAppUpdateCallback"
+        }
+      }
+    }
+  },
+  "dependencies": {
+    "btoa": "1.2.1",
+    "axios": "0.27.2",
+    "dayjs": "1.10.7",
+    "aws-sdk": "2.1214.0"
+  },
+  "whitelisted-domains": [
+    "https://*.freshservice.com",
+    "https://app.knowledgeowl.com",
+    "https://bux46haihc.execute-api.us-east-1.amazonaws.com"
+  ],
+  "engines": {
+    "node": "14.0.0",
+    "fdk": "8.5.0"
+  }
+}
